@@ -17,6 +17,10 @@ import Creators from '../views/Creators.vue'
 import FourOFour from '../views/FourOFour.vue'
 import GetInTouch from '../views/GetInTouch.vue'
 import Post from '../views/Post.vue'
+import AboutUs from '../views/AboutUs.vue'
+import Help from '../views/Help.vue'
+import Search from '../views/Search.vue'
+import Applications from '../views/Applications.vue'
 
 import Account from '../views/Account.vue'
 import Wallet from '../views/Wallet.vue'
@@ -26,7 +30,6 @@ import MyApplication from '../views/projects/MyApplication.vue'
 import UpdateApplication from '../views/projects/UpdateApplication.vue'
 import CustomiseContract from '../views/projects/CustomiseContract.vue'
 import DeployContract from '../views/projects/DeployContract.vue'
-
 import SystemSettings from '../views/projects/SystemSettings.vue'
 
 Vue.use(VueRouter)
@@ -38,9 +41,29 @@ const routes: Array<RouteConfig> = [
     components: { default: Homepage, header: MainNavbar, footer: MainFooter }
   },
   {
+    path: '/applications',
+    name: 'applications',
+    components: { default: Applications, header: MainNavbar, footer: MainFooter }
+  },
+  {
     path: '/community',
     name: 'community',
     components: { default: Community, header: MainNavbar, footer: MainFooter }
+  },
+  {
+    path: '/aboutus',
+    name: 'aboutus',
+    components: { default: AboutUs, header: MainNavbar, footer: MainFooter }
+  },
+  {
+    path: '/search',
+    name: 'search',
+    components: { default: Search, header: MainNavbar, footer: MainFooter }
+  },
+  {
+    path: '/help',
+    name: 'help',
+    components: { default: Help, header: MainNavbar, footer: MainFooter }
   },
   {
     path: '/collections',

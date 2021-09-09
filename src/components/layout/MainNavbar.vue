@@ -20,40 +20,56 @@
 
   <b-collapse id="nav-collapse" is-nav>
     <!-- Right aligned nav items -->
-    <b-navbar-nav class="align-items-xl-center">
+    <b-navbar-nav class="align-items-xl-center"><router-link class="text-white"  to="/Marketplace">Gallery</router-link>
       <b-nav-item-dropdown caret class="pl-xl-2 navbar__gallery-item">
         <!-- Using 'button-content' slot -->
         <template v-slot:button-content class="">
-          <span>Gallery</span>
         </template>
         <b-dropdown-item>Type of Item</b-dropdown-item>
-        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'all' })">All</a></b-dropdown-item>
+<b-dropdown-item><a href="#Marketplace" @click.prevent="$emit('set-filter', { filter: 'all' })">All</a></b-dropdown-item>
         <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'popular' })">Popular</a></b-dropdown-item>
         <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'recent' })">Recently Added</a></b-dropdown-item>
         <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 2 })">On Auction</a></b-dropdown-item>
         <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 1 })">Buy Now</a></b-dropdown-item>
-      </b-nav-item-dropdown>
+</b-nav-item-dropdown>
       <!--
       <b-nav-item><router-link class="text-white" to="/collections">Collections</router-link></b-nav-item>
       <b-nav-item><router-link class="text-white" to="/creators">Creators</router-link></b-nav-item>
       -->
-      <b-nav-item-dropdown caret class="dropdown-menu-wide navbar__applications-item">
+      <b-nav-item-dropdown caret class="dropdown-menu-wide navbar__applications-item" >
         <!-- Using 'button-content' slot -->
         <template v-slot:button-content>
-          <span class="text-white">Applications</span>
+ <router-link class="text-white"  to="/Applications">Applications</router-link>
         </template>
+        <b-container class="app1">
         <div class="row">
-          <div class="col-6">
-            <b-dropdown-item>Connected Applications</b-dropdown-item>
+          <div class="col-4">
+            <b-dropdown-item >Top Applications</b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Loopbomb' })">Loopbomb</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum' })">Lorem ipsum</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum', saleType: 2 })">Lorem ipsum</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum', saleType: 1 })">Lorem ipsum</a></b-dropdown-item>
             <project-list v-on="$listeners"/>
           </div>
+          <div class="row">
+          <div class="col-8">
+                 <b-dropdown-item>View all applications</b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum' })">Lorem ipsum</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum' })">Lorem ipsum</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum', saleType: 2 })">Lorem ipsum</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'Lorem ipsum', saleType: 1 })">Lorem ipsum</a></b-dropdown-item>
+            <project-list v-on="$listeners"/>
+          </div> </div>
         </div>
+        </b-container>
       </b-nav-item-dropdown>
       <b-nav-item><router-link class="text-white" to="/admin-app">Become a Contributor</router-link></b-nav-item>
     </b-navbar-nav>
     <b-navbar-nav class="ml-xl-auto align-items-xl-center">
       <wallet-toggle />
       <b-nav-item><router-link class="text-white" to="/community?uid=lambda-v-stacks">How It Works</router-link></b-nav-item>
+      <b-nav-item><router-link class="text-white" to="/aboutus">About Risidio</router-link></b-nav-item>
+            <b-nav-item><router-link class="text-white" to="/help">Help</router-link></b-nav-item>
     </b-navbar-nav>
 
     <b-navbar-nav class="navbar__login d-flex">
@@ -285,6 +301,7 @@ nav .navbar__applications-item .dropdown-menu li:first-child {
 }
 nav .navbar__applications-item .dropdown-menu li:not(:last-child):not(:first-child) {
   margin-bottom: 15px;
+  width: auto;
 }
 
 /* MOBILE DESIGN */

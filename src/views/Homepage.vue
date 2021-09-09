@@ -7,7 +7,7 @@
         />
         <div class="homepage__buttons--container">
           <button class="button-primary"><router-link class="text-white" to="/marketplace">Explore Our Gallery</router-link></button>
-          <button class="button-secondary"><router-link class="text-white" to="/community">Find Out More</router-link></button>
+          <button class="button-secondary" v-scroll-to="{ element: '#homepage__marketplace-section', duration: 2000 }"><span class="call-button-text">Find Our More</span></button>
         </div>
     </div>
   </div>
@@ -127,6 +127,7 @@
     </div>
   </section>
   <!-- Marketplace Section -->
+  <section class="homepage__marketplace-section" id="homepage__marketplace-section">
   <div class="container flex-column align-items-center homepage__marketplace-section">
     <div class="row">
       <div class="col-12 text-center">
@@ -135,11 +136,12 @@
         />
         <div>
           <button class="button-primary button-primary--alternative-marketplace"><router-link to="/admin-app">How It Works</router-link></button>
-          <button class="button-secondary button-secondary--alternative-marketplace"><router-link to="/community">Get Involved</router-link></button>
+          <button class="button-secondary button-secondary--alternative-marketplace"><router-link to="/aboutus">About Risidio</router-link></button>
         </div>
       </div>
     </div>
   </div>
+  </section>
   <!-- trading section with background -->
   <div :style="tradingImage" class="d-flex align-items-center flex-column homepage__trading-banner">
     <div class="my-auto text-white text-center">
@@ -148,12 +150,12 @@
         />
         <div class="homepage__buttons--container">
           <button class="button-primary"><span v-html="content.trading_buttons[0].button1[0].text"></span></button>
-          <button class="button-secondary"><span v-html="content.trading_buttons[0].button2[0].text"></span></button>
+          <button class="button-secondary" v-scroll-to="{ element: '#homepage__marketplace-section', duration: 2000 }"><span class="call-button-text">Find Our More</span></button>
         </div>
     </div>
   </div>
   <!-- news and blog section -->
-  <div class="container homepage__blog-section">
+  <!-- <div class="container homepage__blog-section">
     <h3 class="text-center mb-5">News and Blogs</h3>
     <div class="row">
       <div v-for="(item, index2) in content.blogs" :key="index2" class="col-md-3 col-sm-6 col-xs-12" >
@@ -164,7 +166,7 @@
       </div>
     </div>
     <div class="text-center"><button class="button-primary button-primary--alternative-marketplace">Read More</button></div>
-  </div>
+  </div> -->
 </div>
 </template>
 

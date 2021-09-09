@@ -11,9 +11,12 @@
       <div class="dropdown__filler"></div>
       <div class="dropdown__items">
         <b-dropdown-item></b-dropdown-item>
-        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'recent' })">Recently Added</a></b-dropdown-item>
-        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 2 })">On Auction</a></b-dropdown-item>
-        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 1 })">Buy Now</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'recent' })">All</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 2 })">Popular</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 1 })">On Sale</a></b-dropdown-item>
+        <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 1 })">On Auction</a></b-dropdown-item>
+         <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 1 })">On Offer</a></b-dropdown-item>
+                 <b-dropdown-item><a href="#" @click.prevent="$emit('set-filter', { filter: 'sale-type', saleType: 1 })">Recently Added</a></b-dropdown-item>
       </div>
     </b-dropdown>
   </div>

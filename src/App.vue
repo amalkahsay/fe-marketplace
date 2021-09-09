@@ -104,6 +104,26 @@ export default {
         this.$store.commit('contentStore/addHomeContent', document.data)
       }
     })
+    this.$prismic.client.getSingle('aboutus').then(document => {
+      if (document) {
+        this.$store.commit('contentStore/addAboutUs', document.data)
+      }
+    })
+    this.$prismic.client.getSingle('applications').then(document => {
+      if (document) {
+        this.$store.commit('contentStore/addApplications', document.data)
+      }
+    })
+    this.$prismic.client.getSingle('community').then(document => {
+      if (document) {
+        this.$store.commit('contentStore/addCommunity', document.data)
+      }
+    })
+    this.$prismic.client.getSingle('help').then(document => {
+      if (document) {
+        this.$store.commit('contentStore/addHelp', document.data)
+      }
+    })
   },
   methods: {
     setFilter (data) {

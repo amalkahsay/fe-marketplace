@@ -52,7 +52,7 @@
 
 <script>
 // Importing all the slices components
-// import PrismicItems from '@/components/utils/PrismicItems'
+// import  from '@/components/utils/PrismicItems'
 import SlicesBlock from '@/components/SlicesBlock.vue'
 
 export default {

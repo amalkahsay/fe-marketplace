@@ -4,10 +4,13 @@ const contentStore = {
     content: {
       homepage: null,
       aboutus: null,
+      help: null,
       proposal: null,
       navigation: null,
       products: null,
-      pages: null
+      pages: null,
+      community: null,
+      applications: null
     },
     pageIds: {
       education: 'XuH1mBIAAFbNZG32',
@@ -28,8 +31,17 @@ const contentStore = {
     getHomepage: state => {
       return state.content.homepage
     },
+    getCommunity: state => {
+      return state.content.community
+    },
+    getApplications: state => {
+      return state.content.applications
+    },
     getAboutUs: state => {
       return state.content.aboutus
+    },
+    getHelp: state => {
+      return state.content.help
     },
     getPages: state => {
       return state.content.pages
@@ -56,8 +68,17 @@ const contentStore = {
     addHomeContent (state, o) {
       state.content.homepage = o
     },
-    addAboutUsContent (state, o) {
+    addCommunity (state, o) {
+      state.content.community = o
+    },
+    addApplications (state, o) {
+      state.content.applications = o
+    },
+    addAboutUs (state, o) {
       state.content.aboutus = o
+    },
+    addHelp (state, o) {
+      state.content.help = o
     },
     addNavigationContent (state, o) {
       state.content.navigation = o

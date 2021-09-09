@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="px-3 px-md-5"><p class="text-sm">My Dashbard</p></div>
+    <div class="px-3 px-md-5"><p class="text-sm">My Dashboard</p></div>
     <account-links/>
 </div>
 </template>
